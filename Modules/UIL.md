@@ -8,6 +8,4 @@ end
 UIL = Instance.new("ModuleScript")
 UIL.Parent = Folder
 
-UIL.goto() = function()
-    print("went")
-end
+dog = "Cat"
