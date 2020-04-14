@@ -19,3 +19,5 @@ function windowsize(xy)
         end
     end
 end
+
+print("loaded.. ig")
