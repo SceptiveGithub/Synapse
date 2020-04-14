@@ -8,6 +8,6 @@ end
 UIL = Instance.new("ModuleScript")
 UIL.Parent = Folder
 
-UIL.goto() = function(element)
+UIL.goto(function(element)
     print("went to"..element)
-end
+end)
