@@ -8,16 +8,6 @@ end
 UIL = Instance.new("ModuleScript")
 UIL.Parent = Folder
 
-function windowsize(xy)
-    if game.Workspace:FindFirstChild("Camera") then
-        if xy == "x" or xy == "X" then
-            return(game.Workspace.Camera.ViewportSize.X)
-        elseif xy == "y" or xy == "Y" then
-            return(game.Workspace.Camera.ViewportSize.Y)
-        else
-            return(game.Workspace.Camera.ViewportSize)
-        end
-    end
+UIL.goto() = function(element)
+    print("went to"..element)
 end
-
-print("loaded.. ig")
