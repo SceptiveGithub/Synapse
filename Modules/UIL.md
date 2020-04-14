@@ -10,4 +10,4 @@ UIL.Parent = Folder
 
 dog = "Cat"
 
-return true
+return dog
