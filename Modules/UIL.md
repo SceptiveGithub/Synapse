@@ -5,7 +5,7 @@ else
     Folder.Name = "Synapse Modules"
     Folder.Parent = game.Workspace
 end
-local UIL = Instance.new("ModuleScript")
+UIL = Instance.new("ModuleScript")
 UIL.Parent = Folder
 
 UIL.goto() = function()
