@@ -9,3 +9,5 @@ UIL = Instance.new("ModuleScript")
 UIL.Parent = Folder
 
 dog = "Cat"
+
+return true
