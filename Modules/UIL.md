@@ -2,12 +2,17 @@ if game.Workspace:FindFirstChild("Synapse Modules") then
     game.Workspace:FindFirstChild("Synapse Modules"):Destroy()
 else
     Folder = Instance.new("Folder")
-    Folder.Name = "Synapse Modules"
-    Folder.Parent = game.Workspace
+    Folder.Name,Folder.Parent = "Synapse Modules",game.Workspace
 end
-UIL = Instance.new("ModuleScript")
-UIL.Parent = Folder
-
-UIL.goto(function(element)
-    print("went to"..element)
+if game.Players.LocalPlayer.PlayerScripts.ChatScript.ChatMain:FindFirstChild("ObjectPool") then
+    UIL = game.Players.LocalPlayer.PlayerScripts.ChatScript.ChatMain:FindFirstChild("ObjectPool"):Clone()
+    UIL.Name,UIL.Parent = "UIL",Folder
+else
+    warn("Couldn't grab core module")
+end
+pcall(function()
+    UIL = require(UIL)
+    function UIL.goto(object)
+        mousemoveabs(object.AbsolutePosition.X+object.AbsoluteSize.X/2,object.AbsolutePosition.Y+object.AbsoluteSize.Y/2)
+    end
 end)
