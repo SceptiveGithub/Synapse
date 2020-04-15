@@ -19,10 +19,10 @@ pcall(function()
     end
     function UIL.firebutton(object)
         local Visible = object.Visible
-        local Position = Vector2.new(Mouse.X,Mouse.Y)
+        local mX,mY = Mouse.X,Mouse.Y
         object.Visible = true
         mousemoveabs(object.AbsolutePosition.X+object.AbsoluteSize.X/2,object.AbsolutePosition.Y+object.AbsoluteSize.Y/2)
         object.Visible = Visible
-        mousemoveabs(Position.X,Position.Y)
+        mousemoveabs(mX,mY)
     end
 end)
