@@ -23,6 +23,6 @@ pcall(function()
         object.Visible = true
         mousemoveabs(object.AbsolutePosition.X+object.AbsoluteSize.X/2,object.AbsolutePosition.Y+object.AbsoluteSize.Y/2)
         object.Visible = Visible
-        Mouse.Position = Position
+        mousemoveabs(Position)
     end
 end)
