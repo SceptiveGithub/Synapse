@@ -18,4 +18,7 @@ pcall(function()
         local Pong = tick()
         return Pong-Ping
     end
+    function Python.Run(code)
+        writefile("Python/Medium.txt",code)
+    end
 end)
