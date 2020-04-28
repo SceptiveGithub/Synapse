@@ -19,6 +19,6 @@ pcall(function()
         return Pong-Ping
     end
     function Python.Run(code)
-        writefile("Python/Medium.txt",code)
+        writefile("Python/Medium.txt",tostring(code))
     end
 end)
