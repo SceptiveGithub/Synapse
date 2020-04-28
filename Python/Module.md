@@ -8,7 +8,7 @@ else
     warn("Couldn't grab core module")
 end
 pcall(function()
-    Module = require(Module)
+    Python = require(Python)
     local Player = game.Players.LocalPlayer
     function Python.Ping()
         local Ping = tick()
