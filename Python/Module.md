@@ -19,6 +19,7 @@ function Python.Ping()
 end
 function Python.Run(code,expectreturn)
     writefile("Python/Medium.txt",code)
+    print(expectreturn)
     if expectreturn then
         repeat 
         wait()
