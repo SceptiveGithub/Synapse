@@ -18,9 +18,8 @@ function Python.Ping()
     return Pong-Ping
 end
 function Python.Running()
-    last = tonumber(readfile("Python/Latest.txt"))
-    time = tick()+((tick()+os.time()+1800)-(tick()-os.time()+1800)%3600)
-    if time-.1 < last and time+.1 > last then
+    time = tonumber(readfile("Python/Latest.txt"))
+    if tick()-.1 < time and tick()+.1 > time then
         return true
     else
         return false
