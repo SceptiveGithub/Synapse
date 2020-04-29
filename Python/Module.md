@@ -20,6 +20,7 @@ end
 function Python.Run(code,expectreturn)
     writefile("Python/Medium.txt",code)
     if expectreturn then
+        print(code)
         repeat wait() until readfile("Python/Medium.txt") ~= code
         return readfile("Python/Medium.txt")
     end
