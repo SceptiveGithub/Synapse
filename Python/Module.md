@@ -20,7 +20,7 @@ end
 function Python.Running()
     last = tonumber(readfile("Python/Latest.txt"))
     time = (tick()-os.time()+1800)-(tick()-os.time()+1800)%3600
-    if time()-.1 < last and time()+.1 > last then
+    if time-.1 < last and time+.1 > last then
         return true
     else
         return false
