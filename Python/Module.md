@@ -17,10 +17,18 @@ function Python.Ping()
     local Pong = tick()
     return Pong-Ping
 end
+function Python.Running()
+    time = readfile("Python/Latest.txt")
+    if tick()-.1 < time and tick()+.1 > time then
+        return true
+    else
+        return false
+    end
+end
 function Python.Run(code,expectreturn)
     writefile("Python/Medium.txt","#\n"..code)
     if expectreturn then
-        repeat wait() until readfile("Python/Medium.txt") ~= "#\n"..code
+        repeat wait() until readfile("Python/Medium.txt") ~= code
         return readfile("Python/Medium.txt")
     end
 end
