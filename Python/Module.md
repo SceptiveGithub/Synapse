@@ -18,7 +18,7 @@ function Python.Ping()
     return Pong-Ping
 end
 function Python.Run(code,expectreturn)
-    writefile("Python/Medium.txt",code)
+    writefile("Python/Medium.txt","#\n"..code)
     if expectreturn then
         repeat wait() until readfile("Python/Medium.txt") ~= code
         return readfile("Python/Medium.txt")
