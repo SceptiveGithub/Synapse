@@ -19,7 +19,11 @@ function Python.Ping()
 end
 function Python.Running()
     time = tonumber(readfile("Python/Latest.txt"))
-    if tick()-.1 < time and tick()+.1 > time then
+    if type(time) == "function" then
+        repeat wait() time = tonumber(readfile("Python/Latest.txt")) until type(time) == "number"
+    end
+    print(readfile("Python/Latest.txt"))
+    if os.time()-.1 < time and os.time()+1 > time then
         return true
     else
         return false
