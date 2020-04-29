@@ -19,8 +19,8 @@ function Python.Ping()
 end
 function Python.Running()
     time = tonumber(readfile("Python/Latest.txt"))
-    print(tick()-time)
-    if tick()-.5 < time and tick()+.5 > time then
+    print(os.time()-time)
+    if os.time()-.5 < time and os.time()+.5 > time then
         return true
     else
         return false
