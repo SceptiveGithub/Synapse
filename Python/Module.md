@@ -17,6 +17,10 @@ function Python.Ping()
     local Pong = tick()
     return Pong-Ping
 end
-function Python.Run(code)
+function Python.Run(code,expectreturn)
     writefile("Python/Medium.txt",code)
+    if expectreturn then
+        repeat wait() until readfile("Python/Medium.txt") ~= code
+        return readfile("Python/Medium.txt")
+    end
 end
