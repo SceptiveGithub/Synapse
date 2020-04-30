@@ -1,3 +1,4 @@
+local Module = [[
 if game.Workspace:FindFirstChild("2462459471") then
     game.Workspace:FindFirstChild("2462459471"):Destroy()
 end
@@ -58,3 +59,5 @@ function Python.Run(code,expectreturn)
         return readfile("Python/Medium.txt")
     end
 end
+]]
+return Module
