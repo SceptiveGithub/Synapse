@@ -22,7 +22,7 @@ function Python.Running()
     if type(time) == "function" then
         repeat wait() time = tonumber(readfile("Python/Latest.txt")) until type(time) == "number"
     end
-    if os.time()-.1 < time and os.time()+1 > time then
+    if os.time()-.25 < time and os.time()+.25 > time then
         return true
     else
         return false
