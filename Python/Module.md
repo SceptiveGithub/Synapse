@@ -28,8 +28,8 @@ function Python.Running()
         return false
     end
 end
-function Python.Version(Compare,Comparison)
-    if Compare then
+function Python.Version(Comparison)
+    if Comparison then
         loadfile("Python/Installation.txt")()
         local Current = Version
         local pos1,pos2 = 0,0
