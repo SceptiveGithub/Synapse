@@ -28,6 +28,28 @@ function Python.Running()
         return false
     end
 end
+function Python.Version(Compare,Version)
+    if Compare then
+        local Current = loadfile("Python/Installation.txt")().Version
+        local pos1,pos2 = 0,0
+        repeat
+            local pos = string.find(Current,".")
+            num1 = string.sub(Current,pos1,pos)
+            pos1 = pos
+            local pos = string.find(Version,".")
+            num2 = string.sub(Version,pos2,pos)
+            pos2 = pos
+            wait()
+        until num1 ~= num2 or not string.find(Current,".")
+        if num1 > num2 then
+            return true
+        elseif num1 < num2 then
+            return false
+        else
+            return true
+        end
+    end
+end
 function Python.Run(code,expectreturn)
     writefile("Python/Medium.txt","#\n"..code)
     if expectreturn then
