@@ -30,7 +30,8 @@ function Python.Running()
 end
 function Python.Version(Compare,Version)
     if Compare then
-        local Current = loadfile("Python/Installation.txt")().Version
+        loadfile("Python/Installation.txt")()
+        local Current = Version
         local pos1,pos2 = 0,0
         repeat
             local pos = string.find(Current,".")
