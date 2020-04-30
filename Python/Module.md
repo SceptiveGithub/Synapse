@@ -28,20 +28,20 @@ function Python.Running()
         return false
     end
 end
-function Python.Version(Compare,Version)
+function Python.Version(Compare,Comparison)
     if Compare then
         loadfile("Python/Installation.txt")()
         local Current = Version
         local pos1,pos2 = 0,0
         repeat
-            local pos = string.find(Current,".")
+            local pos = string.find(Current,".",pos1)
             num1 = string.sub(Current,pos1,pos)
-            pos1 = pos
-            local pos = string.find(Version,".")
-            num2 = string.sub(Version,pos2,pos)
-            pos2 = pos
+            pos1 = pos+1
+            local pos = string.find(Comparison,".",pos2)
+            num2 = string.sub(Comparison,pos2,pos)
+            pos2 = pos+1
             wait()
-        until num1 ~= num2 or not string.find(Current,".")
+        until num1 ~= num2 or not string.find(Current,".",pos1)
         if num1 > num2 then
             return true
         elseif num1 < num2 then
