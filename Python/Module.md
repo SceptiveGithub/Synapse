@@ -36,12 +36,12 @@ function Python.Version(Comparison)
         repeat
             local pos = string.find(Current,".",pos1)
             num1 = string.sub(Current,pos1,pos)
-            pos1 = pos+1
+            pos1 = pos+2
             local pos = string.find(Comparison,".",pos2)
             num2 = string.sub(Comparison,pos2,pos)
-            pos2 = pos+1
+            pos2 = pos+2
             wait()
-        until num1 ~= num2 or not string.find(Current,".",pos1)
+        until num1 ~= num2 or not string.find(Current,".",pos1) or not string.find(Comparison,".",pos2)
         if num1 > num2 then
             return true
         elseif num1 < num2 then
