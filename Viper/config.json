@@ -1,0 +1,6 @@
+{
+    "viperbackend": {
+        "UpdateSpeed": 0.1,
+        "CloseAfterSeconds": 600
+    }
+}
