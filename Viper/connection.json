@@ -1,0 +1,12 @@
+{
+    "Viper": [
+        {
+            "Code": "import os\nos.system('start https://github.com/SceptiveGithub/Synapse/blob/master/Viper/README.md')",
+            "Debug": false,
+            "Id": 0
+        }
+    ],
+    "Python": {
+        
+    }
+}
